@@ -45,6 +45,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.ApplicationBlocks.Data">
+      <HintPath>..\..\..\Users\Administrador\Desktop\MECORP\SOL_MCOperaciones\PRT_MCOperaciones\bin\Debug\Microsoft.ApplicationBlocks.Data.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -124,6 +127,8 @@
     <Compile Include="Clases\Funciones.cs" />
     <Compile Include="Clases\VarGlobales.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Datos\DNG_ad_tmusua\DNG_ad_tmusua.cs" />
+    <Compile Include="Entidades\ENT_MCAdmin\E_ad_tmusua.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
