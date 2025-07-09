@@ -7,5 +7,6 @@ namespace ProyectosWeb.Clases
 {
     public class VarGlobales
     {
+        public static string StrEmpresa { get; set; } = "CM Technologies";
     }
 }
