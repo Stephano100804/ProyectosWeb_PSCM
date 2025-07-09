@@ -1,29 +1,38 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Linq;
 using System.Web.Mvc;
 
 namespace ProyectosWeb.Controllers
 {
     public class HomeController : Controller
     {
-        public ActionResult Index()
+        string nombreEmpresa = ProyectosWeb.Clases.VarGlobales.StrEmpresa;
+
+      
+        public ActionResult Inicio()
         {
+            ViewBag.Empresa = nombreEmpresa;
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Nosotros()
         {
-            ViewBag.Message = "Your application description page.";
+            if (Request.UrlReferrer == null)
+            {
+                return RedirectToAction("Inicio", "Home");
+            }
 
+            ViewBag.Empresa = nombreEmpresa;
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Contactanos()
         {
-            ViewBag.Message = "Your contact page.";
+            if (Request.UrlReferrer == null)
+            {
+                return RedirectToAction("Inicio", "Home");
+            }
 
+            ViewBag.Empresa = nombreEmpresa;
             return View();
         }
     }
